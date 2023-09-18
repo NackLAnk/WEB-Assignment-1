@@ -10,32 +10,80 @@
 <body>
 
 <div class="topnav">
-  <a href="#"><img class="logo" src="images/logo.png" alt="Company Logo"></a>
+  <a href="index.html"><img class="logo" src="images/logo.png" alt="Company Logo"></a>
   <a href="#About">About</a>
   <a href="#Travel">Travel</a>
   <a href="#Contact">Contact</a>
-  <a href="https://www.instagram.com/a2tour.kz/"><img class="linklogo" src="images/I-logo.png" alt="Instagram-logo"></a>
+  <a href="https://www.instagram.com/a2tour.kz/"><img class="linklogo" src="images/I-logo.png" alt="Instagram"></a>
+  <a href="https://www.tiktok.com/@a2tour.kz/"><img class="linklogo" src="images/tt-1.png" alt="TikTok"></a>
+  <a href="#"><img class="linklogo" src="images/F-1.png" alt="Facebook"></a>
+  <a href="#login"><img class="linklogo" src="images/G-1.png" alt="Google"></a>
 </div>
-<img src="images/bg-1.jpg">
-<h2 class="topText2">A TEAM OF PROFESSIONAL TRAVEL EXPERTS</h2>
-<h1 class="topText">Our Expertise<span class="bold">, Your Confidence</span></h1>
+<img class="imgTop" src="images/bg-1.jpg">
+<p class="topText2">A TEAM OF PROFESSIONAL TRAVEL EXPERTS</p>
+<h1 class="topText"><em>Our Expertise</em><span class="bold">, Your Confidence</span></h1>
 <div class="container">
     <div class="center">
       <button class="btn">
         <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
         </svg>
         <span>Get in touch!</span>
       </button>
     </div>
   </div>
+  <hr class="divider">
+  <h2 class="title">Popular Destination</h2>
+  <div>
+    <img class="img" src="images/image2.jpg">
+    <img class="img" src="images/image3.jpg">
+    <img class="img" src="images/image4.jfif">
+  </div>
+  <div class="contact-container">
+    <table id="Contact" >
+        <tr>
+            <th colspan="2"><h2>Contact Information</h2></th>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>A2tour@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td>+7-(702)-428-45-84</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td>no office</td>
+        </tr>
+    </table>
 
-  <div id="Contact" class="contact-container">
-    <h2>Contact Information</h2>
-    <p>Email: A2tour@gmail.com</p>
-    <p>Phone: +7-(705)-327-23-73</p>
-    <p>Address: no office</p>
+    <h2 id="login">Вход</h2>
+    <form action="/submit" method="post">
+        <label for="username">Имя пользователя:</label>
+        <input type="text">
+        <br><br>
+        
+        <label for="password">Пароль:</label>
+        <input type="password">
+        <br><br>
+        
+        <input type="submit" value="Войти">
+    </form>
+
+    <h2>Регистрация</h2>
+    <form action="/register" method="post">
+        <label for="newUsername">Новое имя пользователя:</label>
+        <input type="text">
+        <br><br>
+        
+        <label for="newPassword">Новый пароль:</label>
+        <input type="password" >
+        <br><br>
+        
+        <input type="submit">
+    </form>
 </div>
+  
+  
 </body>
 </html>

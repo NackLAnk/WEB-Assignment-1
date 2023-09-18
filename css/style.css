@@ -17,6 +17,10 @@ body {
     align-items: center;
     background-color: white;
     padding: 8px 0px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 100;
   }
   
   .topnav a {
@@ -36,7 +40,9 @@ body {
     .linklogo {
         width: 30px;
         height: 30px;
-        margin-left: 1050px;
+        margin-right: -950px;
+        margin-left: 950px;
+        padding: 0px 3px;
 }
 
     .topText {
@@ -57,11 +63,27 @@ body {
         top: 21%;
     }
 
-    img {
+    .imgTop {
     width: 100%;
     height: 570px;
     object-fit: cover;
     filter: brightness(0.75);
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  width: 750px;
+  background-color: #3498db;
+  margin-left: 450px;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  margin-top: 50px;
+  margin-left: 100px;
+  border-radius: 15px;
 }
 
 .contact-container {
@@ -78,40 +100,21 @@ body {
     top: 40%;
   }
   
-  .center {
-    width: -220px;
-    height: 60px;
-    position: absolute;
-  }
-  
   .btn {
     width: 180px;
     height: 60px;
     cursor: pointer;
     background: transparent;
     border: 1px solid #91C9FF;
-    outline: none;
-    transition: 1s ease-in-out;
   }
   
   svg {
     position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
   }
   
   .btn:hover {
     transition: 1s ease-in-out;
-    background: #4F95DA;
-  }
-  
-  .btn:hover svg {
-    stroke-dashoffset: -480;
+    background: #9eb1c4;
   }
   
   .btn span {
@@ -119,3 +122,19 @@ body {
     font-size: 18px;
     font-weight: 100;
   }
+
+h2.title{
+    font-size: 1em; 
+    color: #5a5a5a; 
+    text-align: center; 
+}
+
+h2.title:after {
+    content: '';
+    display: block;
+    height: 1px; 
+    background: #f66d52; 
+    width: 150px; 
+    margin: 10px auto 0; 
+	transition: 1s; 
+}
