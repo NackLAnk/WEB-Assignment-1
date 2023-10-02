@@ -1,140 +1,256 @@
-@font-face {
-    font-family: Fontspring-DEMO-biennale-boldit;
-    src: url(font/Fontspring-DEMO-biennale-boldit.OTF);
-   }
+/*Font*/
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-    .bold {
-        font-weight: 1;
-}
-  
-  .topnav {
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    background-color: white;
-    padding: 8px 0px;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  .topnav a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 0px 12px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .logo {
-    width: 200px;
-    height: 50px;
+.nav-link.h5 {
+  font-family: 'Caveat', sans-serif; 
+  font-size: 24px; 
 }
 
-    .linklogo {
-        width: 30px;
-        height: 30px;
-        margin-right: -950px;
-        margin-left: 950px;
-        padding: 0px 3px;
+.Text-1 {
+  font-family: 'Caveat', cursive;
+  color: #59BBDF;
 }
 
-    .topText {
-        font-family: Fontspring-DEMO-biennale-boldit;
-        color: white;
-        position: absolute;
-        font-size: 70px;
-        left: 15%;
-        top: 22%;
-    }
-    
-    .topText2 {
-        font-family: sans-serif;
-        color: rgb(252, 242, 242);
-        position: absolute;
-        font-size: 22px;
-        left: 15%;
-        top: 21%;
-    }
-
-    .imgTop {
-    width: 100%;
-    height: 570px;
-    object-fit: cover;
-    filter: brightness(0.75);
+.bold-text-1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
 }
 
-.divider {
-  border: none;
-  height: 2px;
-  width: 750px;
-  background-color: #3498db;
-  margin-left: 450px;
+
+/*before site*/
+
+.highlighted-text {
+  color: #29BE97;
 }
 
-.img {
-  width: 400px;
-  height: 400px;
-  margin-top: 50px;
-  margin-left: 100px;
-  border-radius: 15px;
+.Text-gray {
+  color: #CFCFCF;
+  font-size: 14px
 }
 
-.contact-container {
-    background-color: rgb(40, 37, 37);
-    color: white;
-    padding: 20px;
+.Text-gray2 {
+  color: #6D727B;
+  font-size: 14px
 }
 
-    .container {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    left: 15%;
-    top: 40%;
-  }
-  
-  .btn {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #91C9FF;
-  }
-  
-  svg {
-    position: absolute;
-  }
-  
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #9eb1c4;
-  }
-  
-  .btn span {
-    color: white;
-    font-size: 18px;
-    font-weight: 100;
-  }
-
-h2.title{
-    font-size: 1em; 
-    color: #5a5a5a; 
-    text-align: center; 
+a {
+  text-decoration: none;
+  color: #CFCFCF;
+  transition: color 0.3s;
 }
 
-h2.title:after {
-    content: '';
-    display: block;
-    height: 1px; 
-    background: #f66d52; 
-    width: 150px; 
-    margin: 10px auto 0; 
-	transition: 1s; 
+a:hover {
+  color: #29BE97;
+}
+
+.line {
+  border-top: 1px solid #2E3440; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+.line2 {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*margin left/right*/
+
+.fl-left {
+  float: left !important;
+}
+
+.fl-right {
+  float: right !important;
+}
+
+/*top-social-bar / top-widget-bar*/
+
+.top-social-bar {
+  display: flex;
+  padding: 10px;
+}
+
+.top-widget-bar {
+  display: flex;
+  padding: 10px; 
+}
+
+.top2-navbar {
+  display: flex;
+  padding: 0px; 
+}
+
+.top2-logo {
+  display: flex;
+  margin-top: 10px;
+}
+
+.top2-navbar .nav-link {
+  color: black; 
+  transition: color 0.3s, border-bottom 0.3s; 
+  border-bottom: 2px solid transparent; 
+  padding-bottom: 5px; 
+}
+
+.top2-navbar .nav-link:hover {
+  color: #29BE97; 
+  border-bottom: 2px solid #29BE97; 
+}
+
+#dropdownMenu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  transition: opacity 0.3s, transform 0.3s, height 0.3s;
+  height: 0;
+  overflow: hidden;
+}
+
+.nav-item:hover #dropdownMenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
+
+#dropdownMenu a {
+  color: black; 
+}
+
+#dropdownMenu a:hover {
+  color: #29BE97;
+  transition: color 0.3s;
+}
+
+/*social-icons*/
+
+.ul-icon-social {
+  width: 16px;
+}
+
+/*ul-left-top-bar*/
+
+.ul-text-dec {
+  color: #111;
+  text-decoration: none;
+}
+
+/*margin-right*/
+
+.m-right1 {
+  margin-right: 1px;
+}
+
+.m-right2 {
+  margin-right: 2px;
+}
+
+.m-right3 {
+  margin-right: 3px;
+}
+
+.m-right4 {
+  margin-right: 4px;
+}
+
+.m-right5 {
+  margin-right: 5px;
+}
+
+.m-right10 {
+  margin-right: 10px;
+}
+
+.m-right50 {
+  margin-right: 50px;
+}
+
+.m-right130 {
+  margin-right: 130px;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 999;
+}
+
+.ul-headerFooter-controls {
+  opacity: 0;
+  z-index: 230;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
+  -webkit-pointer-events: none;
+  pointer-events: none;
+}
+
+/* Carousele style */
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 62vh; 
+  object-fit: cover; 
+}
+
+/* Collapse Card */
+
+.card-text {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+}
+
+.bg {
+  width: 210px;
+  height: 262.5px;
+  object-fit:fill;
+}
+
+/* button */
+
+.custom-btn {
+  background-color: transparent;
+  transition: color 0.3s;
+}
+
+.custom-btn:hover {
+  color: #31AAD6;
+}
+
+.custom-btn-outline-success {
+  --bs-btn-color: #7A7E87;
+  --bs-btn-border-color: #cfcfcf;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-border-color: green;
+  --bs-btn-focus-shadow-rgb: 25, 135, 84;
+  --bs-btn-active-color: #31AAD6;
+  --bs-btn-active-border-color: #198754;
+  --bs-btn-disabled-color: #198754;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #198754;
+  --bs-gradient: none;
 }
