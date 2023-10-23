@@ -42,6 +42,14 @@ a:hover {
   color: #29BE97;
 }
 
+/*Lines*/
+
+.topline {
+  border-top: 1px solid #DDDDDD;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .line {
   border-top: 1px solid #2E3440; 
   margin-top: 20px; 
@@ -99,6 +107,8 @@ a:hover {
   color: #29BE97; 
   border-bottom: 2px solid #29BE97; 
 }
+
+/*Dropdown*/
 
 #dropdownMenu {
   display: none;
@@ -173,31 +183,6 @@ a:hover {
 
 .m-right130 {
   margin-right: 130px;
-}
-
-.horizontal-line {
-  width: 100%;
-  height: 1px;
-  background-color: #EBEBEB;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  z-index: 999;
-}
-
-.ul-headerFooter-controls {
-  opacity: 0;
-  z-index: 230;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  align-items: center;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  transition-duration: .5s;
-  transition-timing-function: cubic-bezier(.23,1,.32,1);
-  -webkit-pointer-events: none;
-  pointer-events: none;
 }
 
 /* Carousele style */
