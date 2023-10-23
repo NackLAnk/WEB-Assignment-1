@@ -1,8 +1,8 @@
 /*Font*/
 
 .nav-link.h5 {
-  font-family: 'Caveat', sans-serif; 
-  font-size: 24px; 
+  font-family: 'Caveat', sans-serif;
+  font-size: 24px;
 }
 
 .Text-1 {
@@ -51,15 +51,15 @@ a:hover {
 }
 
 .line {
-  border-top: 1px solid #2E3440; 
-  margin-top: 20px; 
-  margin-bottom: 20px; 
+  border-top: 1px solid #2E3440;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .line2 {
   border-top: 1px solid #DDDDDD;
-  margin-top: 20px; 
-  margin-bottom: 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -83,12 +83,12 @@ a:hover {
 
 .top-widget-bar {
   display: flex;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .top2-navbar {
   display: flex;
-  padding: 0px; 
+  padding: 0px;
 }
 
 .top2-logo {
@@ -97,15 +97,15 @@ a:hover {
 }
 
 .top2-navbar .nav-link {
-  color: black; 
-  transition: color 0.3s, border-bottom 0.3s; 
-  border-bottom: 2px solid transparent; 
-  padding-bottom: 5px; 
+  color: black;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
 }
 
 .top2-navbar .nav-link:hover {
-  color: #29BE97; 
-  border-bottom: 2px solid #29BE97; 
+  color: #29BE97;
+  border-bottom: 2px solid #29BE97;
 }
 
 /*Dropdown*/
@@ -130,7 +130,7 @@ a:hover {
 }
 
 #dropdownMenu a {
-  color: black; 
+  color: black;
 }
 
 #dropdownMenu a:hover {
@@ -194,8 +194,8 @@ a:hover {
 
 .carousel-inner img {
   width: 100%;
-  height: 62vh; 
-  object-fit: cover; 
+  height: 62vh;
+  object-fit: cover;
 }
 
 /* Collapse Card */
@@ -212,7 +212,7 @@ a:hover {
 .bg {
   width: 210px;
   height: 262.5px;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 /* button */
@@ -238,4 +238,106 @@ a:hover {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #198754;
   --bs-gradient: none;
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff; 
+  color: #000; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.notification::after {
+  min-width: 20px;
+  height: 20px;
+  content: attr(data-count);
+  background-color: #ed657d;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(0.5);
+  will-change: opacity, transform;
+}
+
+.notification-content {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification.show-count .notification-content {
+  display: block;
+}
+
+.notification.show-count::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.notification::before {
+  content: "\f0f3";
+  font-family: "FontAwesome";
+  display: block;
+  color: #000; /* Изменено на черный цвет */
+}
+
+.notification.notify::before {
+  animation: bell 1s ease-out;
+  transform-origin: center top;
+}
+
+@keyframes bell {
+  0% {transform: rotate(35deg);}
+  12.5% {transform: rotate(-30deg);}
+  25% {transform: rotate(25deg);}
+  37.5% {transform: rotate(-20deg);}
+  50% {transform: rotate(15deg);}
+  62.5% {transform: rotate(-10deg)}
+  75% {transform: rotate(5deg)}
+  100% {transform: rotate(0);}  
+}
+
+.card-container2 {
+  display: flex;
+  justify-content: center;
+}
+
+.card2 {
+
+  margin: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card2:hover {
+  transform: scale(1.05);
+}
+
+.card2.active {
+  transform: translateY(0);
+  opacity: 1;
 }

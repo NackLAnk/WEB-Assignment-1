@@ -36,20 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (firstNameValue.length >= 2 && lastNameValue.length >= 2) {
             emailField.style.display = "block";
+            phoneField.style.display = "block";
         } else {
             emailField.style.display = "none";
             phoneField.style.display = "none";
             passwordField.style.display = "none";
         }
 
-        if (isValidEmail(emailValue)) {
-            phoneField.style.display = "block";
-        } else {
-            phoneField.style.display = "none";
-            passwordField.style.display = "none";
-        }
-
-        if (isValidPhone(phoneValue)) {
+        if (isValidEmail(emailValue) && isValidPhone(phoneValue)) {
             passwordField.style.display = "block";
             if (isValidPassword(passwordValue)) {
                 submitButton.disabled = false;
@@ -59,19 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             passwordField.style.display = "none";
         }
+
     }
 
     toggleFieldsVisibility();
-    toggleFieldsVisibility();
-
-    submitButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        submitButton.disabled = true;
-        loading.classList.add("active");
-
-        setTimeout(function () {
-            submitButton.disabled = false;
-            loading.classList.remove("active");
-        }, 3000);
-    });
 });
